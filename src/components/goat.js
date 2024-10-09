@@ -10,7 +10,7 @@ function Goat(){
         <> 
             <h1>Who is the G.O.A.T ?</h1>
             <h2 style={{color: color}}>{goat.name}, his country is {goat.country}</h2>
-            <button onClick={()=> { setGoat({name:1, country:'Argentina'});
+            <button onClick={()=> { setGoat({name:'Lionel Messi', country:'Argentina'});
                                     setColor('gold') }}>
                 Nice joke. click to see REAL G.O.A.T? 
             </button>
