@@ -6,14 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import Garage from './components/garage';
 import Goat from './components/goat';
 import List from './components/list';
+import Timer from './components/timer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>  
+  <>  
     <Goat/>
     <List/>
-  </React.StrictMode>
+    <Timer/>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
