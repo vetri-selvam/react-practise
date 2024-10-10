@@ -7,6 +7,7 @@ import Garage from './components/garage';
 import Goat from './components/goat';
 import List from './components/list';
 import Timer from './components/timer';
+import Form from './components/form';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,8 @@ root.render(
   <>  
     <Goat/>
     <List/>
-    <Timer/>
+    <Form/>
+
   </>
 );
 

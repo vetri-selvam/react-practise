@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Timer component that displays the number of times it has rendered.
+ * 
+ * This component uses the `useState` hook to keep track of the render count and the `useEffect` hook to log a message to the console
+ * whenever the count changes. The count is incremented by clicking a button.
+ * 
+ */
 function Timer() { 
     const [count, setCount] =useState(1);
 
@@ -15,11 +22,12 @@ function Timer() {
        setCount( (previousState)=> { return previousState+1 } );
     }
 
-    // function countLimit (){
-    //     if(count > 10){
-    //         setCount(1);
-    //     }
-    // }
+    function countLimit (){
+        // If the count exceeds 10, reset it to 1
+        if(count > 10){
+            setCount(1);
+        }
+    }
 
     
     
