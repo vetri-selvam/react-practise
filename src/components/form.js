@@ -11,40 +11,48 @@ function Form() {
     console.log("Current Name, age and Country: ", details);
   }
 
+  /**
+   * Handles the change event for form inputs.
+   * Updates the state with the new value of the input field.
+   *
+   * @param {Event} e - The event object from the input field.
+   */
+  function handleChange(e){
+
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setDetails((previousState)=>{
+      return{
+        ...previousState , [name] : value // Spread the previous state to retain all existing state properties,
+                                          // then update the property specified by 'name' with the new 'value'
+      } 
+
+    })
+  }
+
   return (
     <>
       <form onSubmit={doWhenSubmitted}>
         Enter your name:
         <input
           type="text"
-          onChange={(e) => {
-            setDetails((previousState) => {
-              // Using `previousState` for keeping the rest of the state unchanged while ppdating the 'name' field.
-              return { ...previousState, name: e.target.value };
-            });
-          }}
+          name="name"
+          onChange={handleChange}   
         />
         <br />
         Enter your age:
         <input
           type="text"
-          onChange={(e) => {
-            setDetails((previousState) => {
-              // Update the 'age' field while keeping the rest of the state unchanged
-              return { ...previousState, age: e.target.value };
-            });
-          }}
+          name="age"
+          onChange={handleChange}
         />
         <br />
         Enter your country:
         <input
           type="text"
-          onChange={(e) => {
-            setDetails((previousState) => {
-              // Update the 'country' field while keeping the rest of the state unchanged
-              return { ...previousState, country: e.target.value };
-            });
-          }}
+          name="country"
+          onChange={handleChange}
         />
         <br />
         <input type="submit" value="Submit" />
