@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Form() {
-  const [details, setDetails] = useState({});
+  const [details, setDetails] = useState({phone:"+91"});
 
   //console.log("Current Name: ",name);
 
@@ -11,7 +11,7 @@ function Form() {
     console.log("Current Name, age and Country: ", details);
   }
 
-  /**
+  /*comment*
    * Handles the change event for form inputs.
    * Updates the state with the new value of the input field.
    *
@@ -55,6 +55,14 @@ function Form() {
           onChange={handleChange}
         />
         <br />
+        Enter your country:
+        <input
+          type="text"
+          name="phone"
+          onChange={handleChange}
+          value={details.phone}
+        />
+        <br/>
         <input type="submit" value="Submit" />
       </form>
     </>
