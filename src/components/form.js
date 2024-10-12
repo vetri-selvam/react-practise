@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Form() {
-  const [details, setDetails] = useState({phone:"+91"});
+  const [details, setDetails] = useState({phone:"+91", country:"India", about: "I love coding"});
 
   //console.log("Current Name: ",name);
 
@@ -49,19 +49,28 @@ function Form() {
         />
         <br />
         Enter your country:
-        <input
-          type="text"
-          name="country"
-          onChange={handleChange}
-        />
+        <select type="text" name="country" onChange={handleChange} value={details.country}>
+          <option value="">Select</option>
+          <option value="Australia">Australia</option>
+          <option value="India">India</option>
+          <option value="UK">UK</option>
+          <option value="USA">USA</option>
+        </select>
         <br />
-        Enter your country:
+        Enter your phone no:
         <input
           type="text"
           name="phone"
           onChange={handleChange}
           value={details.phone}
         />
+        <br/>
+        Tell about Yourself:
+        <textarea
+          name="about"
+          onChange={handleChange}
+          value={details.about}
+        />  
         <br/>
         <input type="submit" value="Submit" />
       </form>
