@@ -13,10 +13,7 @@ import Form from './components/form';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>  
-    <Goat/>
-    <List/>
-    <Form/>
-
+    <App />
   </>
 );
 
